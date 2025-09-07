@@ -1,0 +1,5 @@
+
+project_id = "jrvhqkilzxopesfmpjbz"
+
+[functions.extract-pharmacy-license]
+verify_jwt = true

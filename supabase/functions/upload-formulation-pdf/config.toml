@@ -1,0 +1,5 @@
+
+# This is the configuration file for the upload-formulation-pdf function
+
+# Require authentication
+verify_jwt = true

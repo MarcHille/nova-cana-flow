@@ -1,0 +1,5 @@
+
+project_id = "jrvhqkilzxopesfmpjbz"
+# JWT verification is needed for this function
+verify_jwt = true
+

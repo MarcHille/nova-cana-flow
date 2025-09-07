@@ -1,0 +1,5 @@
+
+# Edge function configuration
+project_id = "jrvhqkilzxopesfmpjbz"
+verify_jwt = false
+

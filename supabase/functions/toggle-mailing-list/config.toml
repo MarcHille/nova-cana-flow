@@ -1,0 +1,6 @@
+
+project_id = "jrvhqkilzxopesfmpjbz"
+verify_jwt = true
+
+[functions.toggle-mailing-list]
+verify_jwt = true

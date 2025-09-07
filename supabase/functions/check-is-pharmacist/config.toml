@@ -1,0 +1,6 @@
+
+project_id = "jrvhqkilzxopesfmpjbz"
+
+[functions.check-is-pharmacist]
+verify_jwt = false
+

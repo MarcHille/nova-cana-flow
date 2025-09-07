@@ -1,0 +1,4 @@
+
+# Basis-Konfiguration der Edge-Funktion
+project_id = "jrvhqkilzxopesfmpjbz"
+verify_jwt = true

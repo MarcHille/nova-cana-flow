@@ -1,0 +1,5 @@
+
+project_id = "jrvhqkilzxopesfmpjbz"
+
+[functions.get-pharmacy-verifications]
+verify_jwt = true

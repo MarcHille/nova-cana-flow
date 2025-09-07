@@ -1,0 +1,6 @@
+
+project_id = "jrvhqkilzxopesfmpjbz"
+verify_jwt = true
+
+[functions.toggle-user-block]
+verify_jwt = true

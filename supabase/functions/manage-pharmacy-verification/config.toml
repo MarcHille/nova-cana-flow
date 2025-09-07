@@ -1,0 +1,5 @@
+
+project_id = "jrvhqkilzxopesfmpjbz"
+
+# Make sure the function has access to the RESEND_API_KEY to send emails
+

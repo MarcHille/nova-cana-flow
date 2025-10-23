@@ -1,6 +1,6 @@
 import { commonStyles, generateFooter } from '../styles/email-styles.ts';
 
-export const getContactFormEmailTemplate = (name: string, email: string, pharmacyName: string, message: string) => `
+export const getContactFormEmailTemplate = (name: string, email: string, pharmacyName: string, message: string, attachments: string[] = []) => `
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -39,6 +39,13 @@ export const getContactFormEmailTemplate = (name: string, email: string, pharmac
     <div class="message-box">
       ${message.replace(/\n/g, '<br>')}
     </div>
+    
+    ${attachments && attachments.length > 0 ? `
+    <h2>Anhänge:</h2>
+    <ul>
+      ${attachments.map((url: string) => `<li><a href="${url}" target="_blank">Anhang öffnen</a></li>`).join('')}
+    </ul>
+    ` : ''}
   </div>
   
   ${generateFooter()}

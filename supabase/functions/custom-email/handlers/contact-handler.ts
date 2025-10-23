@@ -9,7 +9,8 @@ export const handleContactEmail = async (
   pharmacyName: string, 
   message: string, 
   toEmail: string,
-  fromEmail: string
+  fromEmail: string,
+  attachments: string[] = []
 ) => {
   try {
     // Send main contact email
@@ -17,7 +18,7 @@ export const handleContactEmail = async (
       from: fromEmail,
       to: toEmail,
       subject: `Kontaktanfrage von ${name} ${pharmacyName ? `(${pharmacyName})` : ""}`,
-      html: getContactFormEmailTemplate(name, email, pharmacyName, message),
+      html: getContactFormEmailTemplate(name, email, pharmacyName, message, attachments),
       reply_to: email
     });
     

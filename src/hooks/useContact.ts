@@ -97,8 +97,9 @@ export const useContact = ({ successMessage, errorMessage }: ContactFormProps) =
         attachmentUrls = await uploadFiles(files);
       }
 
-      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+      const { data, error } = await supabase.functions.invoke("custom-email", {
         body: {
+          type: "contact",
           name: formData.name,
           email: formData.email,
           pharmacyName: formData.pharmacyName,

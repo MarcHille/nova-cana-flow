@@ -27,6 +27,7 @@ serve(async (req) => {
       name = '', 
       pharmacyName = '', 
       message = '', 
+      attachments = [],
       verificationId,
       status,
       reason,
@@ -74,8 +75,8 @@ serve(async (req) => {
           result = await handleRecoveryEmail(resend, email, redirectTo);
           break;
         case "contact":
-          console.log(`Sending contact email from ${email} (${name}) to ${toEmail}`);
-          result = await handleContactEmail(resend, name, email, pharmacyName, message, toEmail, fromEmail);
+          console.log(`Sending contact email from ${email} (${name}) to ${toEmail} with ${attachments?.length || 0} attachments`);
+          result = await handleContactEmail(resend, name, email, pharmacyName, message, toEmail, fromEmail, attachments);
           break;
         case "pharmacy-verification":
           console.log(`Sending pharmacy verification email to ${email} with status: ${status}`);

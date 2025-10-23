@@ -5,6 +5,7 @@ export interface EmailRequest {
   name?: string;
   pharmacyName?: string;
   message?: string;
+  attachments?: string[];
   verificationId?: string;
   status?: string;
   reason?: string;

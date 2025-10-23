@@ -1,6 +1,5 @@
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.3";
 import { Resend } from "npm:resend@2.0.0";
 import { EmailRequest } from "./types.ts";
 import { handleSignupEmail } from "./handlers/signup-handler.ts";

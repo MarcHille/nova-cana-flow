@@ -30,7 +30,7 @@ serve(async (req) => {
       verificationId,
       status,
       reason,
-      fromEmail = "no-reply@novacana.de",
+      fromEmail = "Novacana <onboarding@resend.dev>",
       toEmail = "info@novacana.de",
       redirectTo = `${new URL(req.url).origin}/login`
     } = requestData;

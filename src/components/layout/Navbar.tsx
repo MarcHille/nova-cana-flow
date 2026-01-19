@@ -144,11 +144,16 @@ const Navbar = () => {
                 </Button>
               </div>
             ) : (
-              <Link to="/login">
-                <Button variant="ghost" size="sm">
-                  Anmelden
-                </Button>
-              </Link>
+              <div className="flex items-center space-x-2">
+                <Link to="/login">
+                  <Button variant="ghost" size="sm">
+                    Anmelden
+                  </Button>
+                </Link>
+                <Link to="/register">
+                  <Button size="sm">Registrieren</Button>
+                </Link>
+              </div>
             )}
           </div>
 
@@ -215,13 +220,22 @@ const Navbar = () => {
             )}
 
             {!user && (
-              <Link
-                to="/login"
-                className="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800"
-                onClick={() => setIsOpen(false)}
-              >
-                Anmelden
-              </Link>
+              <div className="space-y-2">
+                <Link
+                  to="/login"
+                  className="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Anmelden
+                </Link>
+                <Link
+                  to="/register"
+                  className="block px-3 py-2 rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Registrieren
+                </Link>
+              </div>
             )}
           </div>
         </div>

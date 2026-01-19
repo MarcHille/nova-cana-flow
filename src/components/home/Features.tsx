@@ -102,36 +102,6 @@ const Features = () => {
             </div>
           ))}
         </div>
-        
-        <div className="text-center mt-20 animate-fade-in">
-          <div className="bg-gradient-to-r from-purple-100/80 to-blue-100/80 dark:from-purple-900/30 dark:to-blue-900/30 p-12 rounded-3xl max-w-4xl mx-auto shadow-xl transform transition-all duration-500 hover:scale-[1.01]">
-            <div className="inline-flex items-center justify-center mb-6 bg-white dark:bg-gray-800 p-3 rounded-2xl shadow-md">
-              <Leaf className="text-teal-500 h-6 w-6 animate-pulse" />
-            </div>
-            <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              {t('features.cta.title')}
-            </h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto text-lg">
-              {t('features.cta.description')}
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/register" className="inline-block animate-pulse-soft">
-                <Button size="xl" variant="gradient" rounded="full" className="px-10 w-full">
-                  {t('features.cta.register')}
-                </Button>
-              </Link>
-              <Button 
-                size="xl" 
-                variant="outline" 
-                rounded="full" 
-                className="px-10 w-full"
-                onClick={scrollToContact}
-              >
-                {t('features.cta.button')}
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

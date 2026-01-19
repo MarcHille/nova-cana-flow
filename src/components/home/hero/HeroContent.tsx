@@ -7,14 +7,8 @@ import HeroStats from "./HeroStats";
 const HeroContent: React.FC = () => {
   const { t } = useLanguage();
   
-  // Function to scroll to the contact section smoothly
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
+  const handleContact = () => {
+    window.location.href = "mailto:info@novacana.de";
   };
   
   return (
@@ -48,7 +42,7 @@ const HeroContent: React.FC = () => {
           variant="gradient" 
           rounded="full" 
           className="w-full sm:w-auto hover-lift"
-          onClick={scrollToContact}
+          onClick={handleContact}
         >
           {t('hero.cta.contact')}
         </Button>

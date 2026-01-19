@@ -1,6 +1,8 @@
 
 import React from "react";
-import { CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { CheckCircle, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 const About = () => {
   const {
@@ -99,6 +101,17 @@ const About = () => {
                   </p>
                 </div>
               </div>
+            </div>
+            
+            <div className="animate-fade-in" style={{
+              animationDelay: "0.4s"
+            }}>
+              <Link to="/about">
+                <Button size="lg" variant="gradient" rounded="full" className="group">
+                  {t('about.button')}
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

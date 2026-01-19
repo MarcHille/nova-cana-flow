@@ -1,8 +1,6 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import HeroStats from "./HeroStats";
 
@@ -54,12 +52,6 @@ const HeroContent: React.FC = () => {
         >
           {t('hero.cta.contact')}
         </Button>
-        <Link to="/register" className="hover-lift">
-          <Button size="lg" variant="outline" rounded="full" className="w-full sm:w-auto group">
-            <span>{t('hero.cta.register')}</span>
-            <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-          </Button>
-        </Link>
       </div>
       
       <HeroStats />
